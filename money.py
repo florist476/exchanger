@@ -1,7 +1,7 @@
 import requests
 
 valcode = input('Введіть валюту ')
-date = input("Введіть дату без крупок за принципом yyyymmdd ")
+date = input("Введіть дату ")
 response = requests.get(f"https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode={valcode}&date={date}&json")
 a = response.json()
 cash = int(input("Кількість банкнот?"))
